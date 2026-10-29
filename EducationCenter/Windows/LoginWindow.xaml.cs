@@ -78,7 +78,7 @@ namespace EducationCenter.Windows
                     }
                     Properties.Settings.Default.Save();
 
-                    if (user.RoleId == 2)
+                    if (user.RoleId == 5)
                     {
                         CoordinatorWindow coordinatorWindow = new CoordinatorWindow();
                         coordinatorWindow.Show();
@@ -87,7 +87,7 @@ namespace EducationCenter.Windows
                     }
                 }
                 else
-                {
+                { 
                     MessageBox.Show("Капча собрана неверно. Попробуйте еще раз.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
 
                     failedAttempCount++;
