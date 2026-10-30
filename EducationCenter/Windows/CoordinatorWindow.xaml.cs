@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EducationCenter.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,29 +18,18 @@ namespace EducationCenter.Windows
     /// </summary>
     public partial class CoordinatorWindow : Window
     {
+        EducationCenterContext context = new EducationCenterContext();
         public CoordinatorWindow()
         {
             InitializeComponent();
+
+            UserLv.ItemsSource = new List<string>();
         }
 
-        private void EmployeeLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void StartFilterSearchBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void SearchBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AddBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
